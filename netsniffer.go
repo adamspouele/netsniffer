@@ -24,7 +24,7 @@ func main() {
 	app.Commands = []cli.Command{
 		{
 			Name:  "ns",
-			Usage: "Looks up teh Name Servers for a Particular Host",
+			Usage: "Looks up the Name Servers for a Particular Host",
 			Flags: myFlags,
 			Action: func(c *cli.Context) error {
 				ns, err := net.LookupNS(c.String("host"))
